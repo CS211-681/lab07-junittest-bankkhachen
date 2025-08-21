@@ -8,10 +8,9 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import ku.cs.models.Student;
 import ku.cs.models.StudentList;
-import ku.cs.services.Datasource;
-import ku.cs.services.StudentHardCodeDatasource;
-import ku.cs.services.StudentListFileDatasource;
-import ku.cs.services.StudentListHardCodeDatasource;
+import ku.cs.services.*;
+
+import java.io.IOException;
 
 public class StudentListController {
     @FXML private ListView<Student> studentListView;
@@ -89,6 +88,15 @@ public class StudentListController {
         } else {
             giveScoreTextField.setText("");
             errorLabel.setText("");
+        }
+    }
+
+    @FXML
+    public void onBackButtonClick() {
+        try {
+            FXRouter.goTo("hello");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

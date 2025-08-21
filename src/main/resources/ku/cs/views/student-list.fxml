@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.cs.controllers.StudentListController">
    <children>
       <Label layoutX="56.0" layoutY="34.0" text="Student List" textFill="#0e973e">
@@ -15,7 +14,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button layoutY="-1.0" mnemonicParsing="false" text="Back" />
+      <Button layoutY="-1.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
       <ListView fx:id="studentListView" layoutX="56.0" layoutY="100.0" prefHeight="451.0" prefWidth="331.0" />
       <Label layoutX="416.0" layoutY="119.0" text="Selected Student">
          <font>
