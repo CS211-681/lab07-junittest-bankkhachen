@@ -28,8 +28,8 @@ class StudentTest {
 
     @Test
     void testCalculateGrade(){
-        s.addScore(1);
-        assertEquals("F", s.grade());
+        s.addScore(70);
+        assertEquals("B", s.grade());
     }
 
     @Test

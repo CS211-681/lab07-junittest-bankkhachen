@@ -21,7 +21,11 @@ class StudentListTest {
 
     @Test
     void testFindStudentById() {
+        assertNotNull(s.findStudentById("6710400001"));
         assertNotNull(s.findStudentById("6710400002"));
+        assertNotNull(s.findStudentById("6710400003"));
+        assertNotNull(s.findStudentById("6710400004"));
+        assertNull(s.findStudentById("6710400005"));
     }
 
     @Test
@@ -43,6 +47,8 @@ class StudentListTest {
         StudentList filtered = s.filterByName("First");
 
         assertNull(filtered.findStudentById("6710400002"));
+        assertNull(filtered.findStudentById("6710400003"));
+        assertNull(filtered.findStudentById("6710400004"));
     }
 
     @Test
